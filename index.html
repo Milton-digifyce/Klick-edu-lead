@@ -96,7 +96,7 @@
             background: #8B33E8;
         }
         
-        /* Fixed floating Enquire CTA */
+        /* Fixed floating Enquire CTA - Desktop */
         .fixed-enquire {
             position: fixed;
             right: 20px;
@@ -110,9 +110,8 @@
     </style>
 </head>
 
-<body class="font-sans text-gray-700 bg-white antialiased overflow-x-hidden">
+<body class="font-sans text-gray-700 bg-white antialiased overflow-x-hidden pb-24 md:pb-0">
 
-    <!-- ═══════════════════ NAVBAR ═══════════════════ -->
     <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -120,15 +119,14 @@
                     <img class="h-10" src="assets/logo1.png" alt="KLickEdu Logo">
                 </div>
                 <div class="flex items-center gap-4">
-                    <a href="#contact" class="btn-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:shadow-lg transition-all">
+                    <button onclick="openModal()" class="btn-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:shadow-lg transition-all">
                         Free Registration
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
     <section id="home" class="hero-gradient pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -150,18 +148,24 @@
                         Meet KlickEdu MBBS abroad experts and explore affordable medical universities, admission process, fee structure, accommodation, visa guidance, travel support and career pathway — all in one place.
                     </p>
 
-                    <div class="bg-brandPrimary/10 border border-brandPrimary/30 rounded-lg p-4 mb-8">
-                        <p class="text-sm font-bold text-brandPrimary">2 Complete MBBS Abroad from ₹35–55 Lakhs</p>
-                        <p class="text-xs text-gray-600 mt-2">with end-to-end guidance from KlickEdu</p>
+                    <div class="bg-brandPrimary/10 border border-brandPrimary/30 flex justify-center items-center rounded-lg p-4 mb-8">
+                        <p class="text-lg font-bold text-brandPrimary">2.5lakhs per year</p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <a href="#contact" class="btn-primary text-white px-8 py-3.5 rounded-lg font-bold text-center">Book Free Expo Pass</a>
-                        <a href="#eligibility" class="border-2 border-brandDark text-brandDark px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50 transition-all text-center">Check Eligibility</a>
-                        <a href="#contact" class="border-2 border-brandSecondary text-brandSecondary px-8 py-3.5 rounded-lg font-bold hover:bg-red-50 transition-all text-center">Talk to Counsellor</a>
-                        <a href="#contact" class="border-2 border-brandPrimary text-brandPrimary px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50 transition-all text-center">Enquire Now</a>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                        <button onclick="openModal()" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold text-center flex items-center justify-center leading-snug">
+                            Book Free Expo Pass
+                        </button>
+                        <a href="#eligibility" class="border-2 border-brandDark text-brandDark px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                            Check Eligibility
+                        </a>
+                        <button onclick="openModal()" class="border-2 border-brandSecondary text-brandSecondary px-3 py-4 rounded-xl text-sm font-bold hover:bg-red-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                            Talk to Counsellor
+                        </button>
+                        <button onclick="openModal()" class="border-2 border-brandPrimary text-brandPrimary px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                            Enquire Now
+                        </button>
                     </div>
-
                     <p class="text-xs text-gray-500 italic">
                         *Fees vary based on country, university, hostel, food, travel, visa and currency changes.
                     </p>
@@ -184,12 +188,11 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Enquire Now</a>
+                <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Enquire Now</button>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ EXPO CITIES SECTION ═══════════════════ -->
     <section id="cities" class="py-20 md:py-28 bg-surface border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -210,9 +213,9 @@
                         <p><strong>Venue:</strong> Park Inn Hotel</p>
                         <p><strong>Time:</strong> 09:00 AM – 06:00 PM</p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-brandPrimary font-bold text-sm hover:gap-3 transition-all">
+                    <button onclick="openModal()" class="inline-flex items-center text-brandPrimary font-bold text-sm hover:gap-3 transition-all">
                         Notify Me <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
@@ -227,9 +230,9 @@
                         <p><strong>Venue:</strong> Radisson</p>
                         <p><strong>Time:</strong> 09:00 AM – 06:00 PM</p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-orange-600 font-bold text-sm hover:gap-3 transition-all">
+                    <button onclick="openModal()" class="inline-flex items-center text-orange-600 font-bold text-sm hover:gap-3 transition-all">
                         Notify Me <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
@@ -244,9 +247,9 @@
                         <p><strong>Venue:</strong> Pandian Hotel</p>
                         <p><strong>Time:</strong> 09:00 AM – 06:00 PM</p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-emerald-600 font-bold text-sm hover:gap-3 transition-all">
+                    <button onclick="openModal()" class="inline-flex items-center text-emerald-600 font-bold text-sm hover:gap-3 transition-all">
                         Notify Me <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
@@ -261,9 +264,9 @@
                         <p><strong>Venue:</strong> SRM Hotel</p>
                         <p><strong>Time:</strong> 09:00 AM – 06:00 PM</p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-blue-600 font-bold text-sm hover:gap-3 transition-all">
+                    <button onclick="openModal()" class="inline-flex items-center text-blue-600 font-bold text-sm hover:gap-3 transition-all">
                         Notify Me <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
@@ -278,9 +281,9 @@
                         <p><strong>Venue:</strong> Zone by Park</p>
                         <p><strong>Time:</strong> 09:00 AM – 06:00 PM</p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-pink-600 font-bold text-sm hover:gap-3 transition-all">
+                    <button onclick="openModal()" class="inline-flex items-center text-pink-600 font-bold text-sm hover:gap-3 transition-all">
                         Notify Me <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
@@ -295,22 +298,21 @@
                         <p><strong>Venue:</strong> Accord Hotel</p>
                         <p><strong>Time:</strong> 09:00 AM – 06:00 PM</p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-indigo-600 font-bold text-sm hover:gap-3 transition-all">
+                    <button onclick="openModal()" class="inline-flex items-center text-indigo-600 font-bold text-sm hover:gap-3 transition-all">
                         Notify Me <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
 
             <div class="text-center mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
+                <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
                     Notify Me About My City Expo
-                </a>
-                <a href="#contact" class="border-2 border-white text-white/90 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">Enquire Now</a>
+                </button>
+                <button onclick="openModal()" class="border-2 border-white text-white/90 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">Enquire Now</button>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ WHY THIS EXPO ═══════════════════ -->
     <section id="why-expo" class="py-20 md:py-28 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -358,7 +360,6 @@
         </div>
     </section>
 
-    <!-- ═══════════════════ COST COMPARISON ═══════════════════ -->
     <section id="comparison" class="py-20 md:py-28 bg-surface border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -366,33 +367,61 @@
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">Many families struggle with high private MBBS fees in India. MBBS abroad gives NEET-qualified students another planned and budget-friendly pathway.</p>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+                <table class="w-full bg-white overflow-hidden">
                     <thead>
                         <tr class="bg-gradient-to-r from-brandPrimary/10 to-brandSecondary/10 border-b border-gray-200">
-                            <th class="px-6 py-4 text-left font-bold text-brandDark">Comparison</th>
-                            <th class="px-6 py-4 text-left font-bold text-red-600">Private MBBS in India</th>
-                            <th class="px-6 py-4 text-left font-bold text-emerald-600">MBBS Abroad with KlickEdu</th>
+                            <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-brandDark">Comparison</th>
+                            <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-red-600">Private MBBS in India</th>
+                            <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-emerald-600">MBBS Abroad with KlickEdu</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50"><td class="px-6 py-4 font-semibold text-gray-900">Seat Competition</td><td class="px-6 py-4 text-gray-600">Very high</td><td class="px-6 py-4 text-emerald-600 font-semibold">Multiple options</td></tr>
-                        <tr class="hover:bg-gray-50"><td class="px-6 py-4 font-semibold text-gray-900">Fee Planning</td><td class="px-6 py-4 text-gray-600">Very expensive</td><td class="px-6 py-4 text-emerald-600 font-semibold">₹35–55 Lakhs (Planned)</td></tr>
-                        <tr class="hover:bg-gray-50"><td class="px-6 py-4 font-semibold text-gray-900">Admission Clarity</td><td class="px-6 py-4 text-gray-600">Confusing for parents</td><td class="px-6 py-4 text-emerald-600 font-semibold">Step-by-step support</td></tr>
-                        <tr class="hover:bg-gray-50"><td class="px-6 py-4 font-semibold text-gray-900">Accommodation</td><td class="px-6 py-4 text-gray-600">Depends on college</td><td class="px-6 py-4 text-emerald-600 font-semibold">Full support</td></tr>
-                        <tr class="hover:bg-gray-50"><td class="px-6 py-4 font-semibold text-gray-900">Parent Support</td><td class="px-6 py-4 text-gray-600">Limited after admission</td><td class="px-6 py-4 text-emerald-600 font-semibold">Lifelong guidance</td></tr>
-                        <tr class="hover:bg-gray-50"><td class="px-6 py-4 font-semibold text-gray-900">Career Pathway</td><td class="px-6 py-4 text-gray-600">Student researches alone</td><td class="px-6 py-4 text-emerald-600 font-semibold">Expert guidance</td></tr>
+                    <tbody class="divide-y divide-gray-200 text-xs md:text-base">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Seat Competition</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Very high</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Multiple country and university options</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Fee Planning</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">India private MBBS can cost crores.</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">explore MBBS abroad options with fees starting from ₹2.5 Lakhs/year* and total budget planning from ₹35–55 Lakhs*.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Admission Clarity</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Often confusing for parents</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Step-by-step counselling support</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Accommodation</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Depends on college</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Hostel/accommodation support available</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Parent Support</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Limited after admission</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Dedicated guidance from counselling to travel</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Career Pathway</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Student has to research separately</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Guidance for licensing, internship and future options</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Decision Support</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Mostly seat-focused</td>
+                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Country, university, budget and safety comparison</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Enquire Now</a>
+                <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Compare My MBBS Options</button>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ WHY MBBS ABROAD ═══════════════════ -->
     <section id="why-abroad" class="py-20 md:py-28 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto">
@@ -414,14 +443,14 @@
                     <p class="text-gray-700 mt-2">Students who complete MBBS abroad and want to practice in India must follow applicable NMC/NBEMS licensing or screening requirements.</p>
                 </div>
                 <div class="text-center mt-12">
-                    <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
+                    <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
                         Enquire Now
-                    </a>
-                </div>            </div>
+                    </button>
+                </div>            
+            </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ WHY TRUST KLICKEDU ═══════════════════ -->
     <section id="trust" class="py-20 md:py-28 bg-surface border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -443,7 +472,7 @@
                 </div>
 
                 <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-                                        <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 text-3xl mb-6 font-bold">3</div>
+                    <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 text-3xl mb-6 font-bold">3</div>
                     <h3 class="text-xl font-bold text-brandDark mb-3">Transparent Fee Planning</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">We explain tuition fees, hostel, food, visa, travel and other expenses before the family decides.</p>
                 </div>
@@ -469,37 +498,184 @@
         </div>
     </section>
 
-    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
-    <section id="final-cta" class="py-20 md:py-28 bg-white border-t border-gray-200">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-brandDark mb-6">Your MBBS Journey Can Start Here</h2>
-            <p class="text-lg text-gray-600 mb-10 leading-relaxed">Don't wait until all options close. Meet KlickEdu experts, compare MBBS abroad opportunities, understand the real cost and take the next step with clarity.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#contact" class="btn-primary text-white px-12 py-4 rounded-lg font-bold text-lg inline-block">Register for MBBS Expo 2026</a>
-                <a href="#contact" class="border-2 border-brandDark text-brandDark px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50">Enquire Now</a>
+    <section style="padding-top: 1rem; padding-bottom: 1rem;" id="success-stories" class="py-10 md:py-28 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brandDark mb-4">
+                    KlickEdu <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandSecondary">Success Stories</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+                    From NEET confusion to confident MBBS admission decisions.
+                </p>
             </div>
 
-            <div class="mt-16 pt-12 border-t border-gray-200">
-                <p class="text-sm text-gray-500 mb-8">TRUSTED BY THOUSANDS OF FAMILIES ACROSS INDIA</p>
-                <div class="flex flex-wrap justify-center items-center gap-8 text-gray-600 font-semibold">
-                    <div class="text-center">
-                        <p class="text-3xl font-black text-brandPrimary">1000+</p>
-                        <p class="text-xs mt-1">Students Graduated</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-brandPrimary">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                     </div>
-                    <div class="text-center">
-                        <p class="text-3xl font-black text-brandSecondary">7</p>
-                        <p class="text-xs mt-1">Cities in Tamil Nadu</p>
+                    <h3 class="text-xl font-bold text-brandDark mb-4">Student Confusion to Career Clarity</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Many students come to KlickEdu after NEET with one big question: “What next?” Our counsellors help them understand available countries, university options, total budget, admission steps and career pathway.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6 text-brandSecondary">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     </div>
-                    <div class="text-center">
-                        <p class="text-3xl font-black text-emerald-600">50+</p>
-                        <p class="text-xs mt-1">Countries Covered</p>
+                    <h3 class="text-xl font-bold text-brandDark mb-4">Parents Get Confidence Before Sending Their Child Abroad</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        For parents, MBBS abroad is a big emotional and financial decision. KlickEdu explains safety, accommodation, food, travel, student support and future licensing requirements clearly before admission.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brandDark mb-4">Support Beyond Admission</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        KlickEdu does not stop at admission. Students also receive guidance for documentation, visa, travel, accommodation and settling into university life abroad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-surface rounded-3xl p-8 md:p-12 border border-gray-200 shadow-sm">
+                <div class="text-center md:text-left mb-10">
+                    <h3 class="text-2xl font-bold text-brandDark">Proof Elements to Add</h3>
+                    <p class="text-gray-600 mt-1">Verified milestones showing our commitment to your medical journey.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brandDark text-sm md:text-base">Student Testimonials</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-0.5">Verified text & video feedback from currently enrolled medical students.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brandDark text-sm md:text-base">Parent Testimonials</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-0.5">Reviews highlighting peace of mind regarding safety, finances, and support.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brandDark text-sm md:text-base">Admission Letter Screenshots</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-0.5">Authentic copies of official university offer letters (with blurred personal data).</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brandDark text-sm md:text-base">Visa Success Stories</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-0.5">Documented proof of timely, error-free visa approvals across international borders.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brandDark text-sm md:text-base">Departure & Visit Photos</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-0.5">Airport drop-off logs and interactive on-site campus inspection imagery.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brandDark text-sm md:text-base">Country-Wise Student Success Count</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-0.5">Transparent tallies showing our active footprints across globally recognized hubs.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="who-should-attend" class="py-20 md:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-brandDark mb-4">
+                    This Expo Is Perfect For You If…
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Make an informed decision for your medical career under one roof.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mb-16">
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You are NEET-qualified and planning MBBS</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You are worried about high private MBBS fees in India</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You want to compare MBBS abroad countries</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You are a parent looking for a safe option for your child</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You want clear fee details before making a decision</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You need guidance on hostel, food, visa and travel</p>
+                </div>
+                <div class="flex items-start gap-4 md:col-span-2 md:w-1/2 md:mx-auto">
+                    <div class="mt-1 flex-shrink-0 text-emerald-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <p class="text-lg text-gray-800 font-medium">You want to understand career options after MBBS abroad</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block hover:opacity-90 transition-opacity">
+                    Book Your Free Pass
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ REGISTRATION FORM ═══════════════════ -->
     <section id="contact" class="py-20 md:py-28 bg-gradient-to-br from-brandPrimary to-brandSecondary relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -592,56 +768,267 @@
         </div>
     </section>
 
-    <!-- ═══════════════════ FOOTER ═══════════════════ -->
-    <footer class="bg-brandDark text-white py-12 md:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <img class="h-8 mb-4" src="assets/logo1.png" alt="KLickEdu">
-                    <p class="text-sm text-gray-400">Your trusted partner in MBBS abroad education guidance.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#cities" class="hover:text-white transition">Cities</a></li>
-                        <li><a href="#why-expo" class="hover:text-white transition">Why Attend</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">Register</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">MBBS Guide</a></li>
-                        <li><a href="#" class="hover:text-white transition">Visa Info</a></li>
-                        <li><a href="#" class="hover:text-white transition">Fee Structure</a></li>
-                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <p class="text-sm text-gray-400 mb-2">Email: info@klickedu.in</p>
-                    <p class="text-sm text-gray-400 mb-4">Phone: +91 XXXXXXXXXX</p>
-                    <div class="flex gap-3">
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+    <section id="final-cta" class="py-20 md:py-28 bg-white border-t border-gray-200">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-brandDark mb-6">Your MBBS Journey Can Start Here</h2>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed">Don't wait until all options close. Meet KlickEdu experts, compare MBBS abroad opportunities, understand the real cost and take the next step with clarity.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button onclick="openModal()" class="btn-primary text-white px-12 py-4 rounded-lg font-bold text-lg inline-block">Register for MBBS Expo 2026</button>
+                <button onclick="openModal()" class="border-2 border-brandDark text-brandDark px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50">Enquire Now</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface text-gray-600 pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 mb-16">
+
+                <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img class="h-28 sm:h-28" src="assets/logo2.png" alt="KlickEdu Logo">
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <p class="text-sm text-gray-500 font-medium leading-relaxed">Student empowering platform</p>
+                        <p class="text-sm text-gray-500 font-medium leading-relaxed pr-4">Custom-made education
+                            solutions for the New Generation</p>
+                    </div>
+                    <div class="space-y-3 text-sm font-bold text-brandDark">
+                        <a href="tel:+918111996000"
+                            class="flex items-center gap-3 hover:text-brandPrimary transition-colors">
+                            <i class="fa-solid fa-phone text-gray-400"></i> +91 8111 99 6000
+                        </a>
+                        <a href="mailto:hello@klickedu.com"
+                            class="flex items-center gap-3 hover:text-brandPrimary transition-colors">
+                            <i class="fa-regular fa-envelope text-gray-400"></i> hello@klickedu.com
+                        </a>
                     </div>
                 </div>
+
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-brandDark font-bold mb-4 text-sm uppercase tracking-wider">Courses</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="#" class="hover:text-brandPrimary transition-colors">MBBS Abroad</a></li>
+                        <li><a href="#" class="hover:text-brandPrimary transition-colors">Aviation</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 md:col-span-2 lg:col-span-4">
+                    <h4 class="text-brandDark font-bold mb-4 text-sm uppercase tracking-wider">Address</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="text-brandDark font-bold text-sm flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-location-dot text-gray-400"></i> Kerala :
+                                </h5>
+                                <p class="text-xs text-gray-500 font-medium leading-relaxed pl-5">
+                                    KlickEdu, 1st Floor,<br>
+                                    MS Building, behind<br>
+                                    New Theatre,<br>
+                                    Aristo, Thampanoor,<br>
+                                    Thiruvananthapuram,<br>
+                                    Kerala, 695012
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="text-brandDark font-bold text-sm flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-location-dot text-gray-400"></i> Coimbatore :
+                                </h5>
+                                <p class="text-xs text-gray-500 font-medium leading-relaxed pl-5">
+                                    DR. No.1270BCD,<br>
+                                    2nd floor, SB Classic<br>
+                                    Towers,<br>
+                                    Trichy Rd, Nadar<br>
+                                    Colony, Race Course<br>
+                                    Area, Coimbatore<br>
+                                    Tamil Nadu, 641018
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="text-brandDark font-bold text-sm flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-location-dot text-gray-400"></i> Vadodara :
+                                </h5>
+                                <p class="text-xs text-gray-500 font-medium leading-relaxed pl-5">
+                                    Indraprasth<br>
+                                    Complex, 1st Floor,<br>
+                                    Nizampura Main<br>
+                                    Road, Vadodara,<br>
+                                    Gujarat, 390002.<br>
+                                    GST Number :<br>
+                                    24AAECD6473F1ZQ
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="text-brandDark font-bold text-sm flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-location-dot text-gray-400"></i> Agra :
+                                </h5>
+                                <p class="text-xs text-gray-500 font-medium leading-relaxed pl-5">
+                                    Shop no -1, First<br>
+                                    Floor,<br>
+                                    Vinayak Mall,<br>
+                                    Deewani crossing<br>
+                                    (LOTUS Hospital<br>
+                                    Building)<br>
+                                    M.G. Road, Agra<br>
+                                    282002 (U.P)
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                    <h4 class="text-brandDark font-bold mb-4 text-sm uppercase tracking-wider">Our Network Offices</h4>
+
+                    <div class="mb-6">
+                        <h5 class="text-brandDark font-bold text-sm mb-2">Overseas :</h5>
+                        <ul class="space-y-1.5 text-xs text-gray-500 font-medium list-disc pl-5 marker:text-gray-300">
+                            <li>Kathmandu, Nepal</li>
+                            <li>Dhaka, Bangladesh</li>
+                            <li>Colombo, Sri Lanka</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h5 class="text-brandDark font-bold text-sm mb-2">India :</h5>
+                        <ul class="space-y-1.5 text-xs text-gray-500 font-medium list-disc pl-5 marker:text-gray-300">
+                            <li>Rajasthan</li>
+                            <li>Delhi -NCR</li>
+                            <li>Uttar Pradesh</li>
+                            <li>Madhya Pradesh</li>
+                            <li>Karnataka</li>
+                            <li>Gujarat</li>
+                            <li>Maharashtra</li>
+                            <li>Punjab</li>
+                            <li>Himachal Pradesh</li>
+                            <li>Haryana</li>
+                            <li>North East States of India</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="border-t border-gray-700 pt-8">
-                <p class="text-center text-sm text-gray-400">
-                    &copy; 2026 KLickEdu. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms & Conditions</a>
-                </p>
+            <div class="text-center md:text-left text-xs font-medium text-gray-500 pt-8 border-t border-gray-200">
+                <p>© 2026 All Rights Reserved by DSA Global Pvt Ltd, Parent Company of KlickEdu.</p>
             </div>
         </div>
     </footer>
 
+    <div id="registerModal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-brandDark/80 backdrop-blur-sm transition-opacity opacity-0 duration-300 modal-backdrop" onclick="closeModal()"></div>
+        
+        <div class="fixed inset-0 flex items-center justify-center p-4 sm:p-6 pointer-events-none">
+            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[95vh] overflow-y-auto pointer-events-auto transform scale-95 opacity-0 transition-all duration-300 modal-content relative">
+                
+                <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-red-100 hover:text-red-500 transition-colors z-10">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+
+                <div class="p-6 md:p-10 relative">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-brandDark mb-2">Book Free Expo Pass</h2>
+                        <p class="text-sm text-gray-600">Secure your spot today and meet top experts.</p>
+                    </div>
+
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1.5">Student Name</label>
+                                <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1.5">Parent Name</label>
+                                <input type="text" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1.5">Mobile Number</label>
+                                <input type="tel" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1.5">WhatsApp Number</label>
+                                <input type="tel" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <label class="block text-sm font-bold text-gray-700 mb-1.5">City</label>
+                            <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <option value="">Select your city</option>
+                                <option>Chennai</option>
+                                <option>Coimbatore</option>
+                                <option>Madurai</option>
+                                <option>Trichy</option>
+                                <option>Salem</option>
+                                <option>Erode</option>
+                                <option>Pondicherry</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1.5">NEET Status</label>
+                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                    <option value="">Select status</option>
+                                    <option>Qualified</option>
+                                    <option>Waiting for Result</option>
+                                    <option>Need Guidance</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1.5">Interested Option</label>
+                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                    <option value="">Select option</option>
+                                    <option>MBBS Abroad</option>
+                                    <option>MBBS India</option>
+                                    <option>Not Sure</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold text-gray-700 mb-1.5">Budget Range</label>
+                            <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <option value="">Select budget</option>
+                                <option>₹35–45L</option>
+                                <option>₹45–55L</option>
+                                <option>₹55L+</option>
+                                <option>Need Guidance</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary text-white w-full px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all">
+                            Confirm Registration
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-3 z-[60] md:hidden shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
+        <button onclick="openModal()" class="w-full btn-primary text-white py-3.5 rounded-xl font-bold text-base flex items-center justify-center gap-2">
+            Book Free Pass Now <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <button onclick="openModal()" class="fixed-enquire btn-primary text-white hidden md:flex items-center gap-2 cursor-pointer">
+        <span>Enquire Now</span>
+    </button>
+
     <script>
+        // Smooth scroll for anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -650,6 +1037,7 @@
             });
         });
 
+        // Navbar shadow on scroll
         const navbar = document.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -658,10 +1046,40 @@
                 navbar.classList.remove('shadow-lg');
             }
         });
+
+        // Modal Logic
+        const modal = document.getElementById('registerModal');
+        const backdrop = modal.querySelector('.modal-backdrop');
+        const content = modal.querySelector('.modal-content');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            // Force a browser reflow to allow the transition to happen smoothly
+            void modal.offsetWidth;
+            
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+            
+            // Prevent background scrolling while modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            backdrop.classList.remove('opacity-100');
+            backdrop.classList.add('opacity-0');
+            
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            
+            // Wait for transition to finish before hiding the div completely
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
     </script>
-    <!-- Fixed floating Enquire CTA -->
-    <a href="#contact" class="fixed-enquire btn-primary text-white hidden md:flex items-center gap-2">
-        <span>Enquire Now</span>
-    </a>
 </body>
 </html>
