@@ -127,71 +127,119 @@
         </div>
     </nav>
 
-    <section id="home" class="hero-gradient pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 rounded-full border border-brandPrimary/30 mb-6">
-                        <span class="w-2.5 h-2.5 bg-brandPrimary rounded-full animate-pulse"></span>
-                        <span class="text-xs font-bold text-brandDark">1 Free Entry • 7 Cities</span>
-                    </div>
 
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-brandDark mb-6 leading-tight">
-                        Biggest <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandSecondary">MBBS Abroad Expo</span> 2026
-                    </h1>
+<section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden md:hero-gradient">
+    <!-- Mobile Background Image & Overlay -->
+    <div class="absolute inset-0 md:hidden z-0">
+        <img src="assets/1.webp" alt="Mobile Background" class="w-full h-full object-cover object-center" />
+        <!-- Frosted white overlay to ensure text readability -->
+        <div class="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div> 
+    </div>
 
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
-                        NEET Qualified? Your MBBS dream can still move forward.
-                    </p>
+    <!-- Main Content Container (relative z-10 keeps it above the background) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold text-brandDark mb-6 leading-tight">
+                    Biggest <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandSecondary">MBBS Abroad Expo</span> 2026
+                </h1>
 
-                    <p class="text-base text-gray-600 mb-8 leading-relaxed">
-                        Meet KlickEdu MBBS abroad experts and explore affordable medical universities, admission process, fee structure, accommodation, visa guidance, travel support and career pathway — all in one place.
-                    </p>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
+                    NEET Qualified? Your MBBS dream can still move forward.
+                </p>
 
-                    <div class="bg-brandPrimary/10 border border-brandPrimary/30 flex justify-center items-center rounded-lg p-4 mb-8">
-                        <p class="text-lg font-bold text-brandPrimary">2.5lakhs per year</p>
-                    </div>
+                <p class="text-base text-gray-600 mb-6 leading-relaxed">
+                    Meet KlickEdu MBBS abroad experts and explore affordable medical universities, admission process, fee structure, accommodation, visa guidance, travel support and career pathway — all in one place.
+                </p>
 
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-                        <button onclick="openModal()" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold text-center flex items-center justify-center leading-snug">
-                            Book Free Expo Pass
-                        </button>
-                        <a href="#eligibility" class="border-2 border-brandDark text-brandDark px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
-                            Check Eligibility
-                        </a>
-                        <button onclick="openModal()" class="border-2 border-brandSecondary text-brandSecondary px-3 py-4 rounded-xl text-sm font-bold hover:bg-red-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
-                            Talk to Counsellor
-                        </button>
-                        <button onclick="openModal()" class="border-2 border-brandPrimary text-brandPrimary px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
-                            Enquire Now
-                        </button>
-                    </div>
-                    <p class="text-xs text-gray-500 italic">
-                        *Fees vary based on country, university, hostel, food, travel, visa and currency changes.
-                    </p>
-                </div>
-
-                <div class="hidden lg:block relative">
-                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden p-8 border border-gray-100">
-                        <div class="grid grid-cols-2 gap-6 mb-8">
-                            <div class="bg-purple-50 rounded-xl p-4">
-                                <p class="text-3xl font-bold text-brandPrimary">1000+</p>
-                                <p class="text-xs text-gray-600 font-medium mt-1">Students Graduated</p>
-                            </div>
-                            <div class="bg-pink-50 rounded-xl p-4">
-                                <p class="text-3xl font-bold text-brandSecondary">50+</p>
-                                <p class="text-xs text-gray-600 font-medium mt-1">Countries</p>
-                            </div>
+                <!-- ═════════ COMPACT & PREMIUM HIGHLIGHTED FEE SECTION ═════════ -->
+                <div class="relative p-[2px] mb-8 rounded-xl bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] shadow-[0_8px_20px_-5px_rgba(139,51,232,0.25)] group overflow-hidden max-w-lg">
+                    
+                    <!-- Glassmorphic Inner Card Body -->
+                    <div class="relative z-10 bg-white/95 backdrop-blur-md rounded-[10px] p-4 md:p-5 transition-colors duration-300">
+                        
+                        <!-- Decorative Light Flares (Scaled down) -->
+                        <div class="absolute -top-8 -right-8 w-16 h-16 bg-brandSecondary/20 rounded-full blur-lg group-hover:scale-150 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-8 -left-8 w-16 h-16 bg-brandPrimary/20 rounded-full blur-lg group-hover:scale-150 transition-transform duration-500"></div>
+                        
+                        <div class="relative z-20 flex flex-col items-center">
+                            <!-- Visual Tag (Smaller) -->
+                            <span class="inline-flex items-center px-2 py-0.5 bg-gradient-to-r from-brandPrimary/10 to-brandSecondary/10 rounded-full border border-brandPrimary/20 text-[10px] font-bold text-brandPrimary tracking-wide uppercase mb-2">
+                                <i class="fas fa-star text-brandSecondary animate-spin-slow mr-1 text-[8px]"></i> Special Budget Option
+                            </span>
+                            
+                            <!-- Main Stat Heading (Reduced size) -->
+                            <p class="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] mb-2 text-center tracking-tight">
+                                ₹2.5 Lakhs <span class="text-sm md:text-base font-bold align-middle">per year*</span>
+                            </p>
+                            
+                            <!-- Divider line -->
+                            <div class="w-10 h-0.5 bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-full mb-2.5"></div>
+                            
+                            <!-- Sub Description text inside card (Reduced text-xs/sm size) -->
+                            <p class="text-xs md:text-sm text-gray-800 font-medium text-center leading-snug">
+                                With <span class="text-brandPrimary font-bold">KlickEdu</span>, explore MBBS abroad options with fees starting from <span class="bg-gradient-to-r from-brandPrimary to-brandSecondary bg-clip-text text-transparent font-extrabold">₹2.5 Lakhs/year*</span> and total budget planning from <span class="text-brandDark font-extrabold underline decoration-brandSecondary decoration-2">₹35–55 Lakhs*</span>.
+                            </p>
                         </div>
-                        <img src="assets/1.webp" alt="MBBS Expo" class="w-full rounded-xl object-cover h-64">
                     </div>
                 </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                    <button onclick="openModal()" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold text-center flex items-center justify-center leading-snug">
+                        Register for MBBS Expo
+                    </button>
+                    <a href="#eligibility" class="border-2 border-brandDark text-brandDark px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                        Check Eligibility
+                    </a>
+                    <button onclick="openModal()" class="border-2 border-brandSecondary text-brandSecondary px-3 py-4 rounded-xl text-sm font-bold hover:bg-red-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                        Talk to Counsellor
+                    </button>
+                    <button onclick="openModal()" class="border-2 border-brandPrimary text-brandPrimary px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                        Enquire Now
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 italic">
+                    *Fees vary based on country, university, hostel, food, travel, visa and currency changes.
+                </p>
             </div>
-            <div class="text-center mt-12">
-                <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Enquire Now</button>
+
+            <div class="hidden lg:block relative">
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden p-8 border border-gray-100">
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-purple-50 rounded-xl p-4">
+                            <p class="text-3xl font-bold text-brandPrimary">1000+</p>
+                            <p class="text-xs text-gray-600 font-medium mt-1">Students Graduated</p>
+                        </div>
+                        <div class="bg-pink-50 rounded-xl p-4">
+                            <p class="text-3xl font-bold text-brandSecondary">50+</p>
+                            <p class="text-xs text-gray-600 font-medium mt-1">Countries</p>
+                        </div>
+                    </div>
+                    <img src="assets/1.webp" alt="MBBS Expo" class="w-full rounded-xl object-cover h-64">
+                </div>
             </div>
         </div>
-    </section>
+        <div class="text-center mt-12">
+            <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block hover:scale-105 transition-transform">Enquire Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- ═════════ REQUIRED CSS STYLES FOR THE ANIMATION ═════════ -->
+<!-- Ensure these keyframe styles are inside your main <style> block if they are not already there -->
+<style>
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    .animate-spin-slow {
+        animation: spin 6s linear infinite;
+    }
+</style>
+
+
 
     <section id="cities" class="py-20 md:py-28 bg-surface border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
