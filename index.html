@@ -95,6 +95,18 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #8B33E8;
         }
+        
+        /* Fixed floating Enquire CTA */
+        .fixed-enquire {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 60;
+            border-radius: 9999px;
+            padding: 12px 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            font-weight: 700;
+        }
     </style>
 </head>
 
@@ -147,6 +159,7 @@
                         <a href="#contact" class="btn-primary text-white px-8 py-3.5 rounded-lg font-bold text-center">Book Free Expo Pass</a>
                         <a href="#eligibility" class="border-2 border-brandDark text-brandDark px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50 transition-all text-center">Check Eligibility</a>
                         <a href="#contact" class="border-2 border-brandSecondary text-brandSecondary px-8 py-3.5 rounded-lg font-bold hover:bg-red-50 transition-all text-center">Talk to Counsellor</a>
+                        <a href="#contact" class="border-2 border-brandPrimary text-brandPrimary px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50 transition-all text-center">Enquire Now</a>
                     </div>
 
                     <p class="text-xs text-gray-500 italic">
@@ -169,6 +182,9 @@
                         <img src="assets/1.webp" alt="MBBS Expo" class="w-full rounded-xl object-cover h-64">
                     </div>
                 </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Enquire Now</a>
             </div>
         </div>
     </section>
@@ -285,10 +301,11 @@
                 </div>
             </div>
 
-            <div class="text-center mt-12">
+            <div class="text-center mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
                     Notify Me About My City Expo
                 </a>
+                <a href="#contact" class="border-2 border-white text-white/90 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">Enquire Now</a>
             </div>
         </div>
     </section>
@@ -370,7 +387,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Compare My MBBS Options</a>
+                <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Enquire Now</a>
             </div>
         </div>
     </section>
@@ -457,7 +474,10 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold text-brandDark mb-6">Your MBBS Journey Can Start Here</h2>
             <p class="text-lg text-gray-600 mb-10 leading-relaxed">Don't wait until all options close. Meet KlickEdu experts, compare MBBS abroad opportunities, understand the real cost and take the next step with clarity.</p>
-            <a href="#contact" class="btn-primary text-white px-12 py-4 rounded-lg font-bold text-lg inline-block">Register for MBBS Expo 2026</a>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="btn-primary text-white px-12 py-4 rounded-lg font-bold text-lg inline-block">Register for MBBS Expo 2026</a>
+                <a href="#contact" class="border-2 border-brandDark text-brandDark px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50">Enquire Now</a>
+            </div>
 
             <div class="mt-16 pt-12 border-t border-gray-200">
                 <p class="text-sm text-gray-500 mb-8">TRUSTED BY THOUSANDS OF FAMILIES ACROSS INDIA</p>
@@ -639,5 +659,9 @@
             }
         });
     </script>
+    <!-- Fixed floating Enquire CTA -->
+    <a href="#contact" class="fixed-enquire btn-primary text-white hidden md:flex items-center gap-2">
+        <span>Enquire Now</span>
+    </a>
 </body>
 </html>
