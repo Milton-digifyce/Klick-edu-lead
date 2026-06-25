@@ -59,7 +59,7 @@
             transition: all 0.3s ease;
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover:not(:disabled) {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(139, 51, 232, 0.3);
         }
@@ -180,7 +180,7 @@
                             <div class="w-10 h-0.5 bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-full mb-2.5"></div>
                             
                             <p class="text-xs md:text-sm text-gray-800 font-medium text-center leading-snug">
-                                With <span class="text-brandPrimary font-bold">KlickEdu</span>, explore MBBS abroad options with fees starting from <span class="bg-gradient-to-r from-brandPrimary to-brandSecondary bg-clip-text text-transparent font-extrabold">₹2.5 Lakhs/year*</span> and total budget planning from <span class="text-brandDark font-extrabold underline decoration-brandSecondary decoration-2">₹30–50 Lakhs*</span>.
+                                With <span class="text-brandPrimary font-bold">KlickEdu</span>, explore MBBS abroad options with fees starting from <span class="bg-gradient-to-r from-brandPrimary to-brandSecondary bg-clip-text text-transparent font-extrabold">₹2.5 Lakhs/year*</span> and total budget planning from <span class="text-brandDark font-extrabold underline decoration-brandSecondary decoration-2">starting ₹30 Lakhs*</span>.
                             </p>
                         </div>
                     </div>
@@ -227,9 +227,6 @@
         </div>
     </div>
 </section>
-
-```
-
 
     <section id="cities" class="py-20 md:py-28 bg-surface border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -427,7 +424,7 @@
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Fee Planning</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">India private MBBS can cost crores.</td>
                         <!-- Highlighted Cell -->
-                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">explore MBBS abroad options with fees starting from ₹2.5 Lakhs/year* and total budget planning from ₹30–50 Lakhs*.</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">explore MBBS abroad options with fees starting from ₹2.5 Lakhs/year* and total budget planning from starting ₹30 Lakhs*.</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Admission Clarity</td>
@@ -743,19 +740,8 @@
                         <input type="text" name="studentName" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Parent Name</label>
-                        <input type="text" name="parentName" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Mobile Number</label>
                         <input type="tel" name="mobile" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">WhatsApp Number</label>
-                        <input type="tel" name="whatsapp" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                     </div>
                 </div>
 
@@ -773,31 +759,11 @@
                     </select>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">NEET Status</label>
-                        <select name="neetStatus" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                            <option value="">Select status</option>
-                            <option value="Qualified">Qualified</option>
-                            <option value="Waiting for Result">Waiting for Result</option>
-                            <option value="Need Guidance">Need Guidance</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Interested Option</label>
-                        <select name="interestedOption" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                            <option value="">Select option</option>
-                            <option value="MBBS Abroad">MBBS Abroad</option>
-                            <option value="MBBS India">MBBS India</option>
-                            <option value="Not Sure">Not Sure</option>
-                        </select>
-                    </div>
-                </div>
-
                 <div class="mb-8">
                     <label class="block text-sm font-bold text-gray-700 mb-2">Budget Range</label>
                     <select name="budget" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                         <option value="">Select budget</option>
+                        <option value="₹30–40L">₹30–40L</option>
                         <option value="₹35–45L">₹35–45L</option>
                         <option value="₹45–55L">₹45–55L</option>
                         <option value="₹55L+">₹55L+</option>
@@ -991,19 +957,8 @@
                                 <input type="text" name="studentName" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1.5">Parent Name</label>
-                                <input type="text" name="parentName" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-                            <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">Mobile Number</label>
                                 <input type="tel" name="mobile" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1.5">WhatsApp Number</label>
-                                <input type="tel" name="whatsapp" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             </div>
                         </div>
 
@@ -1021,31 +976,13 @@
                             </select>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1.5">NEET Status</label>
-                                <select name="neetStatus" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                                    <option value="">Select status</option>
-                                    <option value="Qualified">Qualified</option>
-                                    <option value="Waiting for Result">Waiting for Result</option>
-                                    <option value="Need Guidance">Need Guidance</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1.5">Interested Option</label>
-                                <select name="interestedOption" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
-                                    <option value="">Select option</option>
-                                    <option value="MBBS Abroad">MBBS Abroad</option>
-                                    <option value="MBBS India">MBBS India</option>
-                                    <option value="Not Sure">Not Sure</option>
-                                </select>
-                            </div>
-                        </div>
+                       
 
                         <div class="mb-8">
                             <label class="block text-sm font-bold text-gray-700 mb-1.5">Budget Range</label>
                             <select name="budget" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                                 <option value="">Select budget</option>
+                                <option value="₹30–40L">₹30–40L</option>
                                 <option value="₹35–45L">₹35–45L</option>
                                 <option value="₹45–55L">₹45–55L</option>
                                 <option value="₹55L+">₹55L+</option>
@@ -1072,7 +1009,7 @@
         <span>Enquire Now</span>
     </button>
 
-    <script>
+<script>
         // Smooth scroll for anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1102,8 +1039,7 @@
 
         function openModal() {
             modal.classList.remove('hidden');
-            // Force a browser reflow to allow the transition to happen smoothly
-            void modal.offsetWidth;
+            void modal.offsetWidth; // Force a browser reflow
             
             backdrop.classList.remove('opacity-0');
             backdrop.classList.add('opacity-100');
@@ -1111,7 +1047,6 @@
             content.classList.remove('scale-95', 'opacity-0');
             content.classList.add('scale-100', 'opacity-100');
             
-            // Prevent background scrolling while modal is open
             document.body.style.overflow = 'hidden';
         }
 
@@ -1122,7 +1057,6 @@
             content.classList.remove('scale-100', 'opacity-100');
             content.classList.add('scale-95', 'opacity-0');
             
-            // Wait for transition to finish before hiding the div completely
             setTimeout(() => {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
@@ -1133,8 +1067,8 @@
         // GOOGLE APPS SCRIPT FORM SUBMISSION LOGIC
         // =========================================================
         
-        // REPLACE THIS URL WITH YOUR LIVE WEB APP URL FROM APPS SCRIPT
-        const scriptURL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+        // Inserted your live App Script Exec URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxJIOgrNzpQWzKb49kfbiKpgJY9NDyFR092DUk4BElG0gbVMwytNRZU6hi712qIsilp7g/exec';
         
         const forms = document.querySelectorAll('form');
 
@@ -1142,7 +1076,6 @@
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 
-                // Grab the specific submit button for the form being submitted
                 const submitBtn = form.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.innerHTML;
                 
@@ -1156,23 +1089,42 @@
                     body: new FormData(form)
                 })
                 .then(response => {
-                    alert('Registration successful! Our counsellor will contact you shortly.');
-                    form.reset();
+                    if (!response.ok) throw new Error('Network response was not ok.');
                     
-                    // Close the modal if the submission came from the modal form
-                    if (!document.getElementById('registerModal').classList.contains('hidden')) {
-                        closeModal();
-                    }
+                    // Show success feedback on the button instead of alert pop-up
+                    submitBtn.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Registration Successful!';
+                    submitBtn.style.background = '#10B981'; // Tailwind Emerald-500 Green
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    
+                    // Wait a short time before resetting and closing so user can see it
+                    setTimeout(() => {
+                        form.reset();
+                        
+                        // Close modal if this is the modal form
+                        if (!document.getElementById('registerModal').classList.contains('hidden')) {
+                            closeModal();
+                        }
+                        
+                        // Restore button back to original state
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = ''; // Restore CSS background
+                    }, 2000); // 2 second delay
                 })
                 .catch(error => {
                     console.error('Error!', error.message);
-                    alert('Something went wrong. Please try again.');
-                })
-                .finally(() => {
-                    // Restore button state
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    
+                    // Show error feedback on the button
+                    submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Submission Failed';
+                    submitBtn.style.background = '#EF4444'; // Tailwind Red-500
+                    
+                    setTimeout(() => {
+                        // Restore button state
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                        submitBtn.style.background = ''; // Restore CSS background
+                    }, 3000);
                 });
             });
         });
