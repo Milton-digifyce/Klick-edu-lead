@@ -107,6 +107,15 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             font-weight: 700;
         }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-spin-slow {
+            animation: spin 6s linear infinite;
+        }
     </style>
 </head>
 
@@ -127,16 +136,8 @@
         </div>
     </nav>
 
+<section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden hero-gradient">
 
-<section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden md:hero-gradient">
-    <!-- Mobile Background Image & Overlay -->
-    <div class="absolute inset-0 md:hidden z-0">
-        <img src="assets/1.webp" alt="Mobile Background" class="w-full h-full object-cover object-center" />
-        <!-- Frosted white overlay to ensure text readability -->
-        <div class="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div> 
-    </div>
-
-    <!-- Main Content Container (relative z-10 keeps it above the background) -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="fade-in">
@@ -149,37 +150,37 @@
                     NEET Qualified? Your MBBS dream can still move forward.
                 </p>
 
-                <p class="text-base text-gray-600 mb-6 leading-relaxed">
+                <p class="text-base text-black md:text-gray-600 mb-6 leading-relaxed">
                     Meet KlickEdu MBBS abroad experts and explore affordable medical universities, admission process, fee structure, accommodation, visa guidance, travel support and career pathway — all in one place.
                 </p>
 
-                <!-- ═════════ COMPACT & PREMIUM HIGHLIGHTED FEE SECTION ═════════ -->
                 <div class="relative p-[2px] mb-8 rounded-xl bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] shadow-[0_8px_20px_-5px_rgba(139,51,232,0.25)] group overflow-hidden max-w-lg">
                     
-                    <!-- Glassmorphic Inner Card Body -->
+                    <!-- Image added here for Mobile/Tablet only -->
+                    <img src="assets/1.webp" alt="MBBS Expo" class="relative z-20 w-full rounded-t-[10px] object-cover h-64 lg:hidden">
+
                     <div class="relative z-10 bg-white/95 backdrop-blur-md rounded-[10px] p-4 md:p-5 transition-colors duration-300">
                         
-                        <!-- Decorative Light Flares (Scaled down) -->
                         <div class="absolute -top-8 -right-8 w-16 h-16 bg-brandSecondary/20 rounded-full blur-lg group-hover:scale-150 transition-transform duration-500"></div>
                         <div class="absolute -bottom-8 -left-8 w-16 h-16 bg-brandPrimary/20 rounded-full blur-lg group-hover:scale-150 transition-transform duration-500"></div>
                         
                         <div class="relative z-20 flex flex-col items-center">
-                            <!-- Visual Tag (Smaller) -->
-                            <span class="inline-flex items-center px-2 py-0.5 bg-gradient-to-r from-brandPrimary/10 to-brandSecondary/10 rounded-full border border-brandPrimary/20 text-[10px] font-bold text-brandPrimary tracking-wide uppercase mb-2">
-                                <i class="fas fa-star text-brandSecondary animate-spin-slow mr-1 text-[8px]"></i> Special Budget Option
-                            </span>
+                          
                             
-                            <!-- Main Stat Heading (Reduced size) -->
-                            <p class="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] mb-2 text-center tracking-tight">
-                                ₹2.5 Lakhs <span class="text-sm md:text-base font-bold align-middle">per year*</span>
-                            </p>
+                            <div class="relative mb-2">
+                                <!-- glow halo -->
+                                <div class="absolute inset-0 bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-2xl blur-md opacity-50 scale-105"></div>
+                                <!-- pill -->
+                                <div class="relative bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] rounded-2xl px-6 py-2.5 shadow-lg flex items-baseline justify-center gap-1.5">
+                                    <span class="text-3xl md:text-4xl font-black text-white tracking-tight drop-shadow">₹2.5 Lakhs</span>
+                                    <span class="text-sm md:text-base font-semibold text-white/90">per year*</span>
+                                </div>
+                            </div>
                             
-                            <!-- Divider line -->
                             <div class="w-10 h-0.5 bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-full mb-2.5"></div>
                             
-                            <!-- Sub Description text inside card (Reduced text-xs/sm size) -->
                             <p class="text-xs md:text-sm text-gray-800 font-medium text-center leading-snug">
-                                With <span class="text-brandPrimary font-bold">KlickEdu</span>, explore MBBS abroad options with fees starting from <span class="bg-gradient-to-r from-brandPrimary to-brandSecondary bg-clip-text text-transparent font-extrabold">₹2.5 Lakhs/year*</span> and total budget planning from <span class="text-brandDark font-extrabold underline decoration-brandSecondary decoration-2">₹35–55 Lakhs*</span>.
+                                With <span class="text-brandPrimary font-bold">KlickEdu</span>, explore MBBS abroad options with fees starting from <span class="bg-gradient-to-r from-brandPrimary to-brandSecondary bg-clip-text text-transparent font-extrabold">₹2.5 Lakhs/year*</span> and total budget planning from <span class="text-brandDark font-extrabold underline decoration-brandSecondary decoration-2">₹30–50 Lakhs*</span>.
                             </p>
                         </div>
                     </div>
@@ -199,11 +200,12 @@
                         Enquire Now
                     </button>
                 </div>
-                <p class="text-xs text-gray-500 italic">
+                <p class="text-xs text-black/80 md:text-gray-500 italic">
                     *Fees vary based on country, university, hostel, food, travel, visa and currency changes.
                 </p>
             </div>
 
+            <!-- Original Desktop Image Restored Here -->
             <div class="hidden lg:block relative">
                 <div class="bg-white rounded-2xl shadow-2xl overflow-hidden p-8 border border-gray-100">
                     <div class="grid grid-cols-2 gap-6 mb-8">
@@ -226,19 +228,7 @@
     </div>
 </section>
 
-<!-- ═════════ REQUIRED CSS STYLES FOR THE ANIMATION ═════════ -->
-<!-- Ensure these keyframe styles are inside your main <style> block if they are not already there -->
-<style>
-    @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    .animate-spin-slow {
-        animation: spin 6s linear infinite;
-    }
-</style>
-
+```
 
 
     <section id="cities" class="py-20 md:py-28 bg-surface border-t border-gray-200">
@@ -408,67 +398,77 @@
         </div>
     </section>
 
-    <section id="comparison" class="py-20 md:py-28 bg-surface border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-brandDark mb-4">Why Spend Crores Without Comparing MBBS Abroad Options?</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Many families struggle with high private MBBS fees in India. MBBS abroad gives NEET-qualified students another planned and budget-friendly pathway.</p>
-            </div>
-
-            <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-                <table class="w-full bg-white overflow-hidden">
-                    <thead>
-                        <tr class="bg-gradient-to-r from-brandPrimary/10 to-brandSecondary/10 border-b border-gray-200">
-                            <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-brandDark">Comparison</th>
-                            <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-red-600">Private MBBS in India</th>
-                            <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-emerald-600">MBBS Abroad with KlickEdu</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200 text-xs md:text-base">
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Seat Competition</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Very high</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Multiple country and university options</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Fee Planning</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">India private MBBS can cost crores.</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">explore MBBS abroad options with fees starting from ₹2.5 Lakhs/year* and total budget planning from ₹35–55 Lakhs*.</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Admission Clarity</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Often confusing for parents</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Step-by-step counselling support</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Accommodation</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Depends on college</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Hostel/accommodation support available</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Parent Support</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Limited after admission</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Dedicated guidance from counselling to travel</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Career Pathway</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Student has to research separately</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Guidance for licensing, internship and future options</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Decision Support</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Mostly seat-focused</td>
-                            <td class="px-2 py-3 md:px-6 md:py-4 text-emerald-600 font-semibold leading-tight">Country, university, budget and safety comparison</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="text-center mt-12">
-                <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Compare My MBBS Options</button>
-            </div>
+   
+<section id="comparison" class="py-20 md:py-28 bg-surface border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-brandDark mb-4">Why Spend Crores Without Comparing MBBS Abroad Options?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Many families struggle with high private MBBS fees in India. MBBS abroad gives NEET-qualified students another planned and budget-friendly pathway.</p>
         </div>
-    </section>
+
+        <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+            <table class="w-full bg-white overflow-hidden">
+                <thead>
+                    <tr class="bg-gradient-to-r from-brandPrimary/10 to-brandSecondary/10 border-b border-gray-200">
+                        <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-brandDark">Comparison</th>
+                        <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-red-600">Private MBBS in India</th>
+                        <!-- Highlighted Header -->
+                        <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-[#20B38B]">MBBS Abroad with KlickEdu</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 text-xs md:text-base">
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Seat Competition</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Very high</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Multiple country and university options</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Fee Planning</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">India private MBBS can cost crores.</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">explore MBBS abroad options with fees starting from ₹2.5 Lakhs/year* and total budget planning from ₹30–50 Lakhs*.</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Admission Clarity</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Often confusing for parents</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Step-by-step counselling support</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Accommodation</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Depends on college</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Hostel/accommodation support available</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Parent Support</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Limited after admission</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Dedicated guidance from counselling to travel</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Career Pathway</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Student has to research separately</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Guidance for licensing, internship and future options</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Decision Support</td>
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Mostly seat-focused</td>
+                        <!-- Highlighted Cell -->
+                        <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Country, university, budget and safety comparison</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-12">
+            <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">Compare My MBBS Options</button>
+        </div>
+    </div>
+</section>
+
 
     <section id="why-abroad" class="py-20 md:py-28 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -486,10 +486,10 @@
                     <div class="flex gap-4"><span class="text-2xl flex-shrink-0 font-bold text-emerald-600">7</span><p class="text-gray-600">Career pathway guidance for India and abroad</p></div>
                 </div>
 
-                <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+                <!-- <div class="bg-red-50 border border-red-200 rounded-xl p-6">
                     <p class="text-sm font-bold text-red-600">! Important Note</p>
                     <p class="text-gray-700 mt-2">Students who complete MBBS abroad and want to practice in India must follow applicable NMC/NBEMS licensing or screening requirements.</p>
-                </div>
+                </div> -->
                 <div class="text-center mt-12">
                     <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
                         Enquire Now
@@ -718,7 +718,7 @@
             </div>
             <div class="text-center">
                 <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block hover:opacity-90 transition-opacity">
-                    Book Your Free Pass
+                    Book Your Free Registration Now
                 </button>
             </div>
         </div>
@@ -740,73 +740,73 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Student Name</label>
-                        <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                        <input type="text" name="studentName" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Parent Name</label>
-                        <input type="text" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                        <input type="text" name="parentName" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Mobile Number</label>
-                        <input type="tel" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                        <input type="tel" name="mobile" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">WhatsApp Number</label>
-                        <input type="tel" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                        <input type="tel" name="whatsapp" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <label class="block text-sm font-bold text-gray-700 mb-2">City</label>
-                    <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                    <select name="city" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                         <option value="">Select your city</option>
-                        <option>Chennai</option>
-                        <option>Coimbatore</option>
-                        <option>Madurai</option>
-                        <option>Trichy</option>
-                        <option>Salem</option>
-                        <option>Erode</option>
-                        <option>Pondicherry</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Trichy">Trichy</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Pondicherry">Pondicherry</option>
                     </select>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">NEET Status</label>
-                        <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                        <select name="neetStatus" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             <option value="">Select status</option>
-                            <option>Qualified</option>
-                            <option>Waiting for Result</option>
-                            <option>Need Guidance</option>
+                            <option value="Qualified">Qualified</option>
+                            <option value="Waiting for Result">Waiting for Result</option>
+                            <option value="Need Guidance">Need Guidance</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Interested Option</label>
-                        <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                        <select name="interestedOption" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             <option value="">Select option</option>
-                            <option>MBBS Abroad</option>
-                            <option>MBBS India</option>
-                            <option>Not Sure</option>
+                            <option value="MBBS Abroad">MBBS Abroad</option>
+                            <option value="MBBS India">MBBS India</option>
+                            <option value="Not Sure">Not Sure</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="mb-8">
                     <label class="block text-sm font-bold text-gray-700 mb-2">Budget Range</label>
-                    <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                    <select name="budget" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                         <option value="">Select budget</option>
-                        <option>₹35–45L</option>
-                        <option>₹45–55L</option>
-                        <option>₹55L+</option>
-                        <option>Need Guidance</option>
+                        <option value="₹35–45L">₹35–45L</option>
+                        <option value="₹45–55L">₹45–55L</option>
+                        <option value="₹55L+">₹55L+</option>
+                        <option value="Need Guidance">Need Guidance</option>
                     </select>
                 </div>
 
                 <button type="submit" class="btn-primary text-white w-full px-8 py-4 rounded-lg font-bold text-lg">
-                    Book My Free Expo Pass
+                    Book My Free Registration
                 </button>
 
                 <p class="text-xs text-gray-500 text-center mt-6 leading-relaxed">
@@ -980,7 +980,7 @@
 
                 <div class="p-6 md:p-10 relative">
                     <div class="text-center mb-8">
-                        <h2 class="text-2xl md:text-3xl font-extrabold text-brandDark mb-2">Book Free Expo Pass</h2>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-brandDark mb-2">Book Free Registration</h2>
                         <p class="text-sm text-gray-600">Secure your spot today and meet top experts.</p>
                     </div>
 
@@ -988,68 +988,68 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">Student Name</label>
-                                <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <input type="text" name="studentName" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">Parent Name</label>
-                                <input type="text" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <input type="text" name="parentName" placeholder="Enter parent's name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">Mobile Number</label>
-                                <input type="tel" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <input type="tel" name="mobile" placeholder="Enter mobile number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">WhatsApp Number</label>
-                                <input type="tel" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <input type="tel" name="whatsapp" placeholder="Enter WhatsApp number" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                             </div>
                         </div>
 
                         <div class="mb-5">
                             <label class="block text-sm font-bold text-gray-700 mb-1.5">City</label>
-                            <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                            <select name="city" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                                 <option value="">Select your city</option>
-                                <option>Chennai</option>
-                                <option>Coimbatore</option>
-                                <option>Madurai</option>
-                                <option>Trichy</option>
-                                <option>Salem</option>
-                                <option>Erode</option>
-                                <option>Pondicherry</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Coimbatore">Coimbatore</option>
+                                <option value="Madurai">Madurai</option>
+                                <option value="Trichy">Trichy</option>
+                                <option value="Salem">Salem</option>
+                                <option value="Erode">Erode</option>
+                                <option value="Pondicherry">Pondicherry</option>
                             </select>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">NEET Status</label>
-                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <select name="neetStatus" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                                     <option value="">Select status</option>
-                                    <option>Qualified</option>
-                                    <option>Waiting for Result</option>
-                                    <option>Need Guidance</option>
+                                    <option value="Qualified">Qualified</option>
+                                    <option value="Waiting for Result">Waiting for Result</option>
+                                    <option value="Need Guidance">Need Guidance</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1.5">Interested Option</label>
-                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                                <select name="interestedOption" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                                     <option value="">Select option</option>
-                                    <option>MBBS Abroad</option>
-                                    <option>MBBS India</option>
-                                    <option>Not Sure</option>
+                                    <option value="MBBS Abroad">MBBS Abroad</option>
+                                    <option value="MBBS India">MBBS India</option>
+                                    <option value="Not Sure">Not Sure</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="mb-8">
                             <label class="block text-sm font-bold text-gray-700 mb-1.5">Budget Range</label>
-                            <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
+                            <select name="budget" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brandPrimary focus:border-transparent outline-none transition" required>
                                 <option value="">Select budget</option>
-                                <option>₹35–45L</option>
-                                <option>₹45–55L</option>
-                                <option>₹55L+</option>
-                                <option>Need Guidance</option>
+                                <option value="₹35–45L">₹35–45L</option>
+                                <option value="₹45–55L">₹45–55L</option>
+                                <option value="₹55L+">₹55L+</option>
+                                <option value="Need Guidance">Need Guidance</option>
                             </select>
                         </div>
 
@@ -1064,7 +1064,7 @@
 
     <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-3 z-[60] md:hidden shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
         <button onclick="openModal()" class="w-full btn-primary text-white py-3.5 rounded-xl font-bold text-base flex items-center justify-center gap-2">
-            Book Free Pass Now <i class="fas fa-arrow-right"></i>
+            Book Free Registration <i class="fas fa-arrow-right"></i>
         </button>
     </div>
 
@@ -1128,6 +1128,54 @@
                 document.body.style.overflow = '';
             }, 300);
         }
+
+        // =========================================================
+        // GOOGLE APPS SCRIPT FORM SUBMISSION LOGIC
+        // =========================================================
+        
+        // REPLACE THIS URL WITH YOUR LIVE WEB APP URL FROM APPS SCRIPT
+        const scriptURL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+        
+        const forms = document.querySelectorAll('form');
+
+        forms.forEach(form => {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                
+                // Grab the specific submit button for the form being submitted
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                
+                // UI Feedback during submission
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...';
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    alert('Registration successful! Our counsellor will contact you shortly.');
+                    form.reset();
+                    
+                    // Close the modal if the submission came from the modal form
+                    if (!document.getElementById('registerModal').classList.contains('hidden')) {
+                        closeModal();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('Something went wrong. Please try again.');
+                })
+                .finally(() => {
+                    // Restore button state
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                });
+            });
+        });
     </script>
 </body>
 </html>
