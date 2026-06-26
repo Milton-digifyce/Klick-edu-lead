@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="assets/logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -15,7 +15,8 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Inter"', '"Inter Fallback"'] },
+                    // Applied Poppins to the default sans font family
+                    fontFamily: { sans: ['"Poppins"', 'sans-serif'] },
                     colors: {
                         brandDark: '#0F172A',
                         brandPrimary: '#8B33E8',
@@ -55,7 +56,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #8B33E8, #DE247C);
+            background: #8B33E8;
             transition: all 0.3s ease;
         }
 
@@ -156,7 +157,6 @@
 
                 <div class="relative p-[2px] mb-8 rounded-xl bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] shadow-[0_8px_20px_-5px_rgba(139,51,232,0.25)] group overflow-hidden max-w-lg">
                     
-                    <!-- Image added here for Mobile/Tablet only -->
                     <img src="assets/1.webp" alt="MBBS Expo" class="relative z-20 w-full rounded-t-[10px] object-cover h-64 lg:hidden">
 
                     <div class="relative z-10 bg-white/95 backdrop-blur-md rounded-[10px] p-4 md:p-5 transition-colors duration-300">
@@ -168,9 +168,7 @@
                           
                             
                             <div class="relative mb-2">
-                                <!-- glow halo -->
                                 <div class="absolute inset-0 bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-2xl blur-md opacity-50 scale-105"></div>
-                                <!-- pill -->
                                 <div class="relative bg-gradient-to-r from-brandPrimary via-brandSecondary to-brandPrimary bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] rounded-2xl px-6 py-2.5 shadow-lg flex items-baseline justify-center gap-1.5">
                                     <span class="text-3xl md:text-4xl font-black text-white tracking-tight drop-shadow">₹2.5 Lakhs</span>
                                     <span class="text-sm md:text-base font-semibold text-white/90">per year*</span>
@@ -190,13 +188,13 @@
                     <button onclick="openModal()" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold text-center flex items-center justify-center leading-snug">
                         Register for MBBS Expo
                     </button>
-                    <a href="#eligibility" class="border-2 border-brandDark text-brandDark px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                    <a href="#eligibility" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center leading-snug">
                         Check Eligibility
                     </a>
-                    <button onclick="openModal()" class="border-2 border-brandSecondary text-brandSecondary px-3 py-4 rounded-xl text-sm font-bold hover:bg-red-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                    <button onclick="openModal()" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center leading-snug">
                         Talk to Counsellor
                     </button>
-                    <button onclick="openModal()" class="border-2 border-brandPrimary text-brandPrimary px-3 py-4 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all text-center flex items-center justify-center leading-snug bg-white">
+                    <button onclick="openModal()" class="btn-primary text-white px-3 py-4 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center leading-snug">
                         Enquire Now
                     </button>
                 </div>
@@ -205,7 +203,6 @@
                 </p>
             </div>
 
-            <!-- Original Desktop Image Restored Here -->
             <div class="hidden lg:block relative">
                 <div class="bg-white rounded-2xl shadow-2xl overflow-hidden p-8 border border-gray-100">
                     <div class="grid grid-cols-2 gap-6 mb-8">
@@ -343,7 +340,7 @@
                 <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
                     Notify Me About My City Expo
                 </button>
-                <button onclick="openModal()" class="border-2 border-white text-white/90 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">Enquire Now</button>
+                <button onclick="openModal()" class="btn-primary text-white px-8 py-3 rounded-lg font-bold transition">Enquire Now</button>
             </div>
         </div>
     </section>
@@ -409,7 +406,6 @@
                     <tr class="bg-gradient-to-r from-brandPrimary/10 to-brandSecondary/10 border-b border-gray-200">
                         <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-brandDark">Comparison</th>
                         <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-red-600">Private MBBS in India</th>
-                        <!-- Highlighted Header -->
                         <th class="px-2 py-3 md:px-6 md:py-4 text-xs md:text-base text-left font-bold text-[#20B38B]">MBBS Abroad with KlickEdu</th>
                     </tr>
                 </thead>
@@ -417,43 +413,36 @@
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Seat Competition</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Very high</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Multiple country and university options</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Fee Planning</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">India private MBBS can cost crores.</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">explore MBBS abroad options with fees starting from ₹2.5 Lakhs/year* and total budget planning from starting ₹30 Lakhs*.</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Admission Clarity</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Often confusing for parents</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Step-by-step counselling support</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Accommodation</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Depends on college</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Hostel/accommodation support available</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Parent Support</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Limited after admission</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Dedicated guidance from counselling to travel</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Career Pathway</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Student has to research separately</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Guidance for licensing, internship and future options</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-2 py-3 md:px-6 md:py-4 font-semibold text-gray-900 leading-tight">Decision Support</td>
                         <td class="px-2 py-3 md:px-6 md:py-4 text-gray-600 leading-tight">Mostly seat-focused</td>
-                        <!-- Highlighted Cell -->
                         <td class="px-2 py-3 md:px-6 md:py-4 text-[#20B38B] font-semibold leading-tight bg-[#20B38B]/10">Country, university, budget and safety comparison</td>
                     </tr>
                 </tbody>
@@ -483,10 +472,6 @@
                     <div class="flex gap-4"><span class="text-2xl flex-shrink-0 font-bold text-emerald-600">7</span><p class="text-gray-600">Career pathway guidance for India and abroad</p></div>
                 </div>
 
-                <!-- <div class="bg-red-50 border border-red-200 rounded-xl p-6">
-                    <p class="text-sm font-bold text-red-600">! Important Note</p>
-                    <p class="text-gray-700 mt-2">Students who complete MBBS abroad and want to practice in India must follow applicable NMC/NBEMS licensing or screening requirements.</p>
-                </div> -->
                 <div class="text-center mt-12">
                     <button onclick="openModal()" class="btn-primary text-white px-10 py-4 rounded-lg font-bold inline-block">
                         Enquire Now
@@ -788,7 +773,7 @@
             <p class="text-lg text-gray-600 mb-10 leading-relaxed">Don't wait until all options close. Meet KlickEdu experts, compare MBBS abroad opportunities, understand the real cost and take the next step with clarity.</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <button onclick="openModal()" class="btn-primary text-white px-12 py-4 rounded-lg font-bold text-lg inline-block">Register for MBBS Expo 2026</button>
-                <button onclick="openModal()" class="border-2 border-brandDark text-brandDark px-8 py-3.5 rounded-lg font-bold hover:bg-gray-50">Enquire Now</button>
+                <button onclick="openModal()" class="btn-primary text-white px-8 py-3.5 rounded-lg font-bold">Enquire Now</button>
             </div>
         </div>
     </section>
